@@ -2,8 +2,8 @@ import os
 import cv2
 
 import pickle
-import matplotlib.pyplot as plt # plt 用于显示图片
-import matplotlib.image as mpimg # mpimg 用于读取图片
+import matplotlib.pyplot as plt # plt 
+import matplotlib.image as mpimg # mpimg 
 import numpy as np
 from PIL import Image
 
@@ -42,7 +42,7 @@ max_x = 0
 landmark = landmarks
     
 for i in range(len(landmark)): 
-    #print('第',i,'組 -- y :',landmark[i][1],' x :',landmark[i][0])
+    #print('',i,'-- y :',landmark[i][1],' x :',landmark[i][0])
     
     if DISPLAY == True:
         img[int(landmark[i][1]),int(landmark[i][0]),c] = 255
@@ -64,7 +64,7 @@ for i in range(len(landmark)):
 
     if max_x < landmark[i][0]:
         max_x = landmark[i][0]
-print(' | 最小x軸 :',min_x,' | 最大x軸 :',max_x)
+print(' | :',min_x,' | :',max_x)
 
 crop_img = img[:,int(min_x):int(max_x)]
 '''
