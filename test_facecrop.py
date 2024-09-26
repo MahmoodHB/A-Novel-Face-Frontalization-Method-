@@ -2,8 +2,8 @@ import os
 import cv2
 
 import pickle
-import matplotlib.pyplot as plt # plt 用于显示图片
-import matplotlib.image as mpimg # mpimg 用于读取图片
+import matplotlib.pyplot as plt # plt 
+import matplotlib.image as mpimg # mpimg 
 import numpy as np
 from PIL import Image
 
@@ -45,7 +45,7 @@ def crop_img(img_dir,landmark_dir):
         max_x = 0
         
     for i in range(len(landmark)): 
-        #print('第',i,'組 -- y :',landmark[i][1],' x :',landmark[i][0])
+        #print('',i,' -- y :',landmark[i][1],' x :',landmark[i][0])
         
         if DISPLAY == True:
             img[int(landmark[i][1]),int(landmark[i][0]),c] = 255
@@ -67,7 +67,7 @@ def crop_img(img_dir,landmark_dir):
         if max_x < landmark[i][0]:
             max_x = landmark[i][0]
     
-    print(' | 最小x軸 :',min_x,' | 最大x軸 :',max_x)
+    print(' | :',min_x,' | :',max_x)
     
     #corp img
     crop_img = img[:,int(min_x):int(max_x)]
@@ -93,7 +93,7 @@ if __name__ == '__main__':
     os.chdir(src_dataset_dir)  #change working pathway        
     sessions = os.listdir('.')    
       
-    for session in sessions:  #讀取角度
+    for session in sessions:  
         os.chdir(src_dataset_dir)
         print(session)       
         
@@ -107,7 +107,7 @@ if __name__ == '__main__':
         landmark_session_dir = os.path.join(landmark_dir,session)
         src_session_dir = os.path.join(src_dataset_dir,session)     
            
-        for subject in subjects:  #讀取正反面
+        for subject in subjects:  
             #change pathway
             os.chdir(src_session_dir)
             print(session + " " + subject)
@@ -119,7 +119,7 @@ if __name__ == '__main__':
             src_subject_dir = os.path.join(src_session_dir,subject)
             landmark_subject_dir = os.path.join(landmark_session_dir,subject)
         
-            for number in numbers:  #讀取組別
+            for number in numbers:  
                 #change pathway
                 os.chdir(src_subject_dir)
                 print(session + " " + subject + " " +number)
@@ -130,7 +130,7 @@ if __name__ == '__main__':
                 src_number_dir = os.path.join(src_subject_dir,number)
                 landmark_number_dir = os.path.join(landmark_subject_dir,number)
                 
-                for image in images: #讀取圖片
+                for image in images: 
                     i=i+1
                     #change pathway
                     os.chdir(src_number_dir)
