@@ -2,7 +2,7 @@ import os
 import cv2
 import face_alignment #exract
 
-src_dataset_dir = 'E:/tpgan_keras/dataset_png'   # dataset
+src_dataset_dir = 'E:/tpgan_keras/dataset_png'  
 
 fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, flip_input=False)
 #curdir = os.getcwd()  #print working pathway    
@@ -16,7 +16,7 @@ landmark_reye=[0,0]
 landmark_nose=[0,0]
 landmark_mouth=[0,0]
 
-for session in sessions:  #讀取角度
+for session in sessions:  
     #change pathway
     os.chdir(src_dataset_dir)
     print(session)  
@@ -29,7 +29,7 @@ for session in sessions:  #讀取角度
     subjects = os.listdir(session)
     src_session_dir = os.path.join(src_dataset_dir,session)
          
-    for subject in subjects:  #讀取正反面
+    for subject in subjects:  
         #change pathway
        if subject == 't':
             os.chdir(src_session_dir)
@@ -39,7 +39,7 @@ for session in sessions:  #讀取角度
             numbers = os.listdir(subject)
             src_subject_dir = os.path.join(src_session_dir,subject)
         
-            for number in numbers:  #讀取組別
+            for number in numbers:  
                 #change pathway
                 os.chdir(src_subject_dir)
                 print(session + " " + subject + " " +number)
@@ -48,7 +48,7 @@ for session in sessions:  #讀取角度
                 images = os.listdir(number)
                 src_number_dir = os.path.join(src_subject_dir,number)
                 
-                for image in images: #讀取圖片
+                for image in images: 
                     #change pathway
                     os.chdir(src_number_dir)
                     print(session + " " + subject + " " + number + " " + image)
