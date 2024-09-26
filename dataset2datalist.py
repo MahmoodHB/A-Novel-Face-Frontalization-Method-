@@ -23,7 +23,7 @@ for session in sessions:
     subjects = os.listdir(session)
     
     for subject in subjects:
-        if subject is 't': #將正面移除
+        if subject is 't': 
             continue
         src_session_dir = os.path.join(src_dataset_dir, session)
         os.chdir(src_session_dir)
