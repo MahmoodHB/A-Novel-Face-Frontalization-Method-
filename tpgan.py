@@ -57,7 +57,7 @@ class TPGAN():
         self._discriminator = None
         self._generator = None
         self._classifier = None
-        self._parts_rotator = None  #進入臉部
+        self._parts_rotator = None  
         
         self.generator_train_model = None
         self.discriminator_train_model = None
@@ -251,8 +251,8 @@ class TPGAN():
         name = name[0]
     
         in_img = Input(shape=(multipie_gen.IMG_H, multipie_gen.IMG_W, 3))
-        #mc_in_img128 = Concatenate()([in_img, Lambda(lambda x: x[:,:,::-1,:])(in_img)]) #[::-1]將字串或陣列倒序排列
-        mc_in_img128 = in_img #[::-1]將字串或陣列倒序排列
+        #mc_in_img128 = Concatenate()([in_img, Lambda(lambda x: x[:,:,::-1,:])(in_img)]) #[::-1]
+        mc_in_img128 = in_img #[::-1]
 
         mc_in_img64 = Lambda(lambda x: tf.image.resize_bilinear(x, [multipie_gen.IMG_H//2, multipie_gen.IMG_W//2]))(mc_in_img128)
         mc_in_img32 = Lambda(lambda x: tf.image.resize_bilinear(x, [multipie_gen.IMG_H//4, multipie_gen.IMG_W//4]))(mc_in_img64)
