@@ -9,3 +9,5 @@ The dataset can be downlaod from:
 Due to a lack of access to the original dataset, a generated image was used for Multi-PIE, and other datasets were downloaded from the links above.  
 
 Official TP-GAN Tensorflow implementation can be found at: https://github.com/HRLTY/TP-GAN
+
+The code of this work is available for free non-commercial use, and you may redistribute it under license conditions. 
