@@ -8,4 +8,4 @@ The dataset can be downlaod from:
 
 Due to a lack of access to the original dataset, a generated image was used for Multi-PIE, and other datasets were downloaded from the links above.  
 
-All The above dataset can be Download at: https://drive.google.com/drive/folders/1-Z2abMeiDUp9INvoEHeTqIeV-W6bKwB3 
+Official TP-GAN Tensorflow implementation can be found at: https://github.com/HRLTY/TP-GAN
