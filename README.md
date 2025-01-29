@@ -11,3 +11,5 @@ Due to a lack of access to the original dataset, a generated image was used for 
 Official TP-GAN Tensorflow implementation can be found at: https://github.com/HRLTY/TP-GAN
 
 The code of this work is available for free non-commercial use, and you may redistribute it under license conditions. 
+
+In case you have any questions, please do not hesitate to send them to the author's email address: mahmood.bidir1985@gmail.com
