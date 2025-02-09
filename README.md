@@ -13,3 +13,5 @@ Official TP-GAN Tensorflow implementation can be found at: https://github.com/HR
 The code of this work is available for free non-commercial use, and you may redistribute it under license conditions. 
 
 In case you have any questions, please do not hesitate to send them to the author's email address: mahmood.bidir1985@gmail.com
+
+Visit the following website for more information: https://www.mdpi.com/2227-7390/13/3/499 
